@@ -1,8 +1,4 @@
 
-
-
-
-
 body {
     color:#FFF;
 }
@@ -11,7 +7,6 @@ html {
     height: 100%;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow: hidden;
-    font-family: "Monteserrant";
   }
   
   #stars {
@@ -67,6 +62,7 @@ html {
   }
   
   #title {
+    
     position: absolute;
     top: 50%;
     left: 0;
@@ -81,6 +77,7 @@ html {
     padding-left: 10px;
   }
   #title span {
+    font-family: "Montserrat";
     background: -webkit-linear-gradient(white, #38495a);
     background-clip:text;
     -webkit-background-clip: text;
@@ -152,6 +149,7 @@ html {
   
   ul {
     list-style-type: none;
+    
   }
   
   a {
@@ -165,10 +163,12 @@ html {
   
   body {
     font-family: var(--font-family);
+    font-family: "Montserrat";
   }
 
   nav {
     position: sticky;
+    font-family: "Montserrat";
     top: 0;
     left: 0;
     z-index: 1;
