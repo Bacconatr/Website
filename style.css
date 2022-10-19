@@ -99,17 +99,15 @@ html {
    position:relative;
    left:20%;
    top:200px;
-
-    display:block;
-    text-align: justify;
-    font-family: "Montserrat";
-    font-size: 50px;
+   display:block;
+   text-align: justify;
+   font-family: "Montserrat";
+   font-size: 50px;
   }
   #welcomesubText {
-    position:relative;
+    position:fixed;
     left:20%;
-    top:225px;
-
+    top:400px;
     opacity: 80%;
     display:block;
    
@@ -239,3 +237,13 @@ html {
       transform: rotateY(360deg)
     }
   }
+
+  img {
+    position:inherit;
+    transform: translateX(250%);
+    height: 15%;
+    width: 15%;
+    border-radius: 50%;
+    
+  }
+
