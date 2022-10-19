@@ -226,12 +226,15 @@ html {
     display: inline-block;
     font-size: 40px;
     color: #fff;
-    animation: flip 4s infinite;
+    animation-name: flip;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
     animation-delay: calc(.2s * var(--i))
+   
   }
   @keyframes flip {
-    0%,80% {
+    0%,1% {
 
-      transform: rotateY(360deg) 
+      transform: rotateY(360deg)
     }
   }
