@@ -198,7 +198,9 @@ html {
   }
 
   .waviy {
-    position: relative;
+    position: fixed;
+    display: flex;
+    
   }
 
   
@@ -207,7 +209,7 @@ html {
     display: flex;
     font-family: "Montserrat";
     font-size: 40px;
-    top: 30%;
+    top: 35%;
     left: 20%;
     min-height: 20%;
     min-width: 20%;
@@ -220,39 +222,40 @@ html {
     display: flex;
     font-family: "Montserrat";
     font-size: 40px;
-    top: 40%;
+    top: 45%;
     left: 20%;
     min-height: 20%;
     min-width: 20%;
     margin: 0 auto;
-
-
    }
 
    #welcomesubText {
     position: fixed;
     display: flex;
     font-family: "Montserrat";
-    font-size: 40px;
-    top: 50%;
+    font-size: 6.9vh;
+    top: 55%;
     left: 20%;
     opacity: 80%;
+    margin: 0 auto;
+
     
    }
 
 
 
   .waviy span {
+    display: flex;
     letter-spacing: .1em;
     font-family: "Montserrat";
     position: relative;
-    display: inline-block;
-    font-size: 5rem;
+    font-size: 8.9vh;
     color: #fff;
     animation-name: flip;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-delay: calc(.1s * var(--i))
+    
    
   }
   @keyframes flip {
@@ -262,17 +265,20 @@ html {
     }
   }
 
-  /*
+  
   img {
-    position: relative;
+    position: fixed;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
+    height: 35vh;
     align-items: center;
+    top: 20%;
+    left: 45%;
+    margin: 0 auto;
+    background-color: transparent;
+
 
   }
-  */
+  
    /* position:inherit;
     transform: translateX(250%);
     height: 15%;
