@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script defer src = "app.js">  </script>
+<script defer src = "scroll.js">  </script>
+
     <title>
         Alex's Website
         </title>
@@ -37,10 +39,11 @@
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
-    <button class="burger-menu" id="burger-menu">
-      <ion-icon class="bars" name="menu-outline"></ion-icon>
-    </button>
+    
+    
+    
 </nav>
+
 
 <div class="waviy">
 
@@ -49,72 +52,61 @@
    <span style="--i:1">H</span>
    <span style="--i:2">i</span> 
    <span style="--i:3">, </span>
-  </h1>
+<h2 id="welcomeText2">
+  <span style="--i:4">I</span>
+  <span style="--i:5">'</span>
+  <span style="--i:6">m</span>
+  <span style="--i:6">&nbsp;</span>
+  <span style="--i:7">A</span>
+  <span style="--i:8">l</span>
+  <span style="--i:9">e</span>
+  <span style="--i:10">x</span> 
+  
+</h2>
+<h3 id="welcomesubText">Welcome to my website
+</h3>
+<img src = "Portrait.jpeg">
 
-  <h1 id = "welcomeText2">
-   <span style="--i:4">I</span>
-   <span style="--i:5">'</span>
-   <span style="--i:6">m</span>
-   <span style="--i:7">&nbsp;A</span>
-   <span style="--i:8">l</span>
-   <span style="--i:9">e</span>
-   <span style="--i:10">x</span>
 </h1>
-
-<img src="Portrait.jpeg"> 
-
-
-
-
-</div>
-
-<div class = "subText"> 
-
-  <h2 id="welcomesubText">Welcome to my website</h2>
-
 </div>
 
 
-<section id = "about">
+
+
+<div id = "about">
+
   <div class = "about hidden">
-    <h1> Hello World </h1>
+
+
+    <h1> About Me </h1>
   </div>
-</section>
-<section id = "skills"> 
 
+  <div class= "flexWrapper">
 
-</section>
-<section id = "projects"> 
+      <div id = "flex1"> </div>
+      <div id = "flex2"></div>
+      <div id = "flex3"></div>
 
-
-</section>
-<section id = "contact"> 
+  </div>
 
   
-</section>
+  
+
+</div>
+
+<div id = "skills"> 
 
 
-<script type="text/javascript">
+</div>
+<div id = "projects"> 
 
-  window.addEventListener("scroll",reveal);
+
+</div>
+<div id = "contact"> 
+
   
-  function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-  
-    for(var i = 0; i <reveals.length;i++) {
-      var windowheight = window.innerHeight;
-      var revealtop = reveals[i].getBoundingClientRect().top;
-      var revealpoint = 150;
-  
-      if(revealtop < windowheight - revealpoint) {
-        reveals[i].classList.add("active");
-      }
-      else {
-        reveals[i].classList.remove("active");
-      }
-    }
-  }
-  </script>
+</div>
+
 
 
 </body>

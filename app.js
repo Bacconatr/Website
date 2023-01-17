@@ -1,10 +1,9 @@
 
-
 const appearOptions = {
     threshold: 1,
-    rootMargin: "0px 0px -300px 0px"
-
+    rootMargin: "400px 0px -200px 0px"
 };
+
 
 const observer = new IntersectionObserver((entries) => {
 
@@ -14,12 +13,14 @@ const observer = new IntersectionObserver((entries) => {
 
         console.log(entry);
 
+
         if(entry.isIntersecting) {
-
             entry.target.classList.add('show');
-
+            return;
         } else {
                 entry.target.classList.remove('show');
+
+                return;
             }
 
     });
