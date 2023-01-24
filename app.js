@@ -53,7 +53,7 @@ hiddenElements.forEach((element) => {observer.observe(element);});
 
 // animation on scroll effect for about text box's 
 const appearOptions2 = {
-    threshold: 1,
+    threshold: .5,
     rootMargin: "0px 0px 0px 0px"
 };
 
@@ -84,6 +84,7 @@ const hiddenSlide = document.querySelectorAll('.noSlide');
 hiddenSlide.forEach((element) => {slideObserver.observe(element);});
 
 
+document.querySelectorAll('.tagCloudContainer').style.color = color;
 
 
 

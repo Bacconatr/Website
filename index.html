@@ -2,6 +2,7 @@
 <html lang="en">
 <html>
 
+
 <head>
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <link rel="stylesheet" href="style.css">
@@ -16,8 +17,6 @@
         <meta charset="UTF-8">
 </head>
    
-
-
 
 
 <body>
@@ -71,7 +70,7 @@
 </div>
 
 
-
+<div id = "line"></div>
 
 <div id = "about">
 
@@ -94,15 +93,100 @@
 
   </div>
 
-  
+
+
+
   
 
 </div>
+
 
 <div id = "skills"> 
 
 
+  <div class = "skills class">
+
+ 
+    
+    
+  
+    
+    <h1> Skills </h1>
+
+    <div class = "skills text">
+
+      <p> 
+        For more information about proficiency of skills or where 
+        my skills have been applied please click on any of the words
+      </p>
+    
+    
+    </div>
+
+
+
+
+  <span class = "tagCloudContainer">
+    <!-- script for TagCloud -->
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+
+    
+<script>
+  const SKILLS = [
+    "Java",
+    "Python",
+    "C",
+    "C++",
+    "HTML",
+    "CSS",
+    "SQL",
+    "JavaScript",
+    "x86 Assembly",
+    "Davinci Resolve",
+    "Photoshop",
+  ]
+
+  var tagCloud = TagCloud(".tagCloudContainer", SKILLS, {
+    // radius of the sphere in pixels
+
+    radius: 300,
+
+    maxSpeed: 'normal',
+    initSpeed: 'fast',
+
+    direction: 135,
+
+    keep:true 
+
+
+
+
+
+
+  });
+
+  var color = '#FFFFFF';
+</script>
+</span>
+
 </div>
+</div>
+<div class = "popup">
+  <img src="https://img.icons8.com/material-rounded/96/null/close-window.png" class = "close">
+  <div class = "popup-content"> 
+    
+  </div>
+
+    
+</div>
+
+
+
+
+
+
+
+
 <div id = "projects"> 
 
 

@@ -1,18 +1,14 @@
-
 body {
   color:#FFF;
   margin: 0 auto;
   padding: 0 auto;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Monteserrant";
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
 
 
 }
-
-
-
 
 
 
@@ -30,7 +26,7 @@ html {
 html.noscroll {
   position: fixed;
   overflow-y: scroll;
-  height: 100;
+  height: 100%;
   width: 100%;
 }
 
@@ -306,34 +302,16 @@ nav ul li {
   }
 }
 
-/*
-img {
-  position: sticky;
-  display: block;
-  height: 200px;
-  width: 100%;
-  max-width: 1000px;
-  left: 75vw;
-  margin: 0 auto;
-  background-color: transparent;
-  border-radius: 25%;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  margin-right:5vh;
-  transform: translate(2vw,5vh);
-
-}
-*/
 img {
   position: sticky;
   display: flex;
-  height: auto;
+  height: auto; 
+  justify-content: center;
+  align-items: center;
   width: 25vw;
   border-radius: 1rem;
   left: 40%;
   transform: translateY(-100%);
-  
-  
 }
 
 
@@ -384,7 +362,11 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 
+#line {
+  border-bottom: 1px solid #090a0f;
+  display: block;
 }
 
 
@@ -397,8 +379,10 @@ section {
   align-items: center;
   height: 100vh;
   padding: 0 3rem;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  
+}
+#about#hidden {
+  background: radial-gradient(ellipse at bottom,#090a0f 0% #1b2735 100%);
+ 
 }
 
 .flexWrapper {
@@ -411,7 +395,6 @@ section {
   transform: translateY(25%);
   overflow: hidden;
   gap: 5vw;
-  
 
 }
 
@@ -420,22 +403,26 @@ section {
   filter: blur(10px);
   transition: all .5s ease-in;
   z-index: 0;
-  left: -100%;
-
 }
 
 .slide {
   opacity: 1;
   filter: blur(0px);
   transition: all .5s ease-in;
-  animation: 3s slide-right forwards;
+  transform: translateY(25%);
+  animation: 1s slide-right forwards;
 }
 
 @keyframes slide-right {
+  0% {
+    transform: translate(-50%,25%);
+
+  }
   100% {
-    left: 0;
+    transform: translate(0%,25%);
   }
 }
+
 
 
 #flex1 {
@@ -450,8 +437,6 @@ section {
   word-wrap: normal;
   line-height: 1.5em;
   flex: 1;
-
-
 }
 
 
@@ -484,18 +469,40 @@ section {
   flex: 1;
 }
 
-
+.skills {
+  width: 100vw;
+  height: 100vh;
+}
 
 
 #skills {
+  position: sticky;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100vh;
+  width: 100wv;
   padding: 0 3rem;
-  background: radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
+  min-width: 200px;
+  min-height: 1000px;
+  transform: translateY(25%);
+
 }
+
+.skills.class {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 0 3rem;
+  transform: translateY(15%);
+
+}
+
 
 #projects {
   display: flex;
@@ -504,7 +511,6 @@ section {
   align-items: center;
   height: 100%;
   padding: 0 3rem;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 
 }
 
@@ -515,10 +521,97 @@ section {
   align-items: center;
   height: 100%;
   padding: 0 3rem;
-  background: radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
+  background: radial-gradient(ellipse at bottom,#090a0f 0% #1b2735 100%);
+}
+
+.tagCloudContainer {
+  position: sticky;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 35%;
+  transform: translate(30%,-35%);
+}
+
+
+
+.tagcloud {
+
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Monteserrant";
+  font-size: 1.5rem;
+}
+
+.tagcloud--item:hover {
+  color:aqua;
+}
+
+.skills.text {
+  position: sticky;
+  display: flex;
+  width: 25%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #1b2735;
+  border-radius: 1rem;
+  z-index: 1;
+  background-color: #1b2735;
+  word-wrap: normal;
+  padding: 1em;
+  line-height: 1.5em;
+  flex: 1;
+  transform: translate(-100%,100%);
+
 }
 
 
 
 
+
+
+
+.popup {
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  display: none;
+}
+
+
+.popup-content {
+  height: 250px;
+  width: 500px;
+  background: #1b2735;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  transform: translateX(-35%);
+
+
+}
+
+
+.close {
+  position: absolute;
+  top: 320px; 
+  left: 775px;
+  height: 40px;
+  width: 40px;
+  z-index: 1; 
+}
+
+.close:hover {
+  cursor: pointer;
+}
 
