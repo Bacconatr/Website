@@ -104,18 +104,29 @@
 <div id = "skills"> 
 
 
-  <div class = "skills class">
+    
 
- 
-    
-    
   
     
-    <h1> Skills </h1>
+    <h1 id = "skillsHeader"> Skills </h1>
+
+
+
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>Here i am</h2>
+        <a class="close" onclick = "popUP()">&times;</a>
+        <div class="content">
+          Thank to pop me out of that button, but now i'm done so you can close this window.
+        </div>
+      </div>
+    </div>
+ 
 
     <div class = "skills text">
 
-      <p> 
+      <p id = "paragraph"> 
+      
         For more information about proficiency of skills or where 
         my skills have been applied please click on any of the words
       </p>
@@ -124,13 +135,18 @@
     </div>
 
 
+ 
+
+   
+    
+
+
 
 
   <span class = "tagCloudContainer">
     <!-- script for TagCloud -->
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
 
-    
 <script>
   const SKILLS = [
     "Java",
@@ -160,25 +176,40 @@
 
 
 
-
+    
 
 
   });
 
   var color = '#FFFFFF';
+
+  let rootEl = document.querySelector('.tagcloud');
+rootEl.addEventListener('click', function clickEventHandler(e) {
+    if (e.target.className === 'tagcloud--item') {
+        //window.open(`https://www.google.com/search?q=${e.target.innerText}`, '_blank');
+        // your code here
+        document.querySelector(".overlay").style.visibility = "visible";
+        document.querySelector(".overlay").style.opacity = "1";
+
+       // change the text of the popup depending on the skill
+
+       if (e.target.innerText == "Java") {
+        document.querySelector(".content").innerHTML = "Java is a general-purpose computer-programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers ";
+      }
+      else if (e.target.innerText == "Python") {
+        document.querySelector(".content").innerHTML = "Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects. Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented, and functional programming. Python is often described as a \"batteries included\" language due to its comprehensive standard library. Python was conceived in the late 1980s as a successor to the ABC language. Python 2.0, released in 2000, introduced features like list";
+
+  }
+  
+    }
+});
 </script>
+
 </span>
 
 </div>
 </div>
-<div class = "popup">
-  <img src="https://img.icons8.com/material-rounded/96/null/close-window.png" class = "close">
-  <div class = "popup-content"> 
-    
-  </div>
 
-    
-</div>
 
 
 
