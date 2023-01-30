@@ -114,10 +114,9 @@
 
     <div id="popup1" class="overlay">
       <div class="popup">
-        <h2>Here i am</h2>
+        <h2 id = "header">Here i am</h2>
         <a class="close" onclick = "popUP()">&times;</a>
         <div class="content">
-          Thank to pop me out of that button, but now i'm done so you can close this window.
         </div>
       </div>
     </div>
@@ -159,7 +158,6 @@
     "JavaScript",
     "x86 Assembly",
     "Davinci Resolve",
-    "Photoshop",
   ]
 
   var tagCloud = TagCloud(".tagCloudContainer", SKILLS, {
@@ -168,7 +166,7 @@
     radius: 300,
 
     maxSpeed: 'normal',
-    initSpeed: 'fast',
+    initSpeed: 'slow',
 
     direction: 135,
 
@@ -194,13 +192,77 @@ rootEl.addEventListener('click', function clickEventHandler(e) {
        // change the text of the popup depending on the skill
 
        if (e.target.innerText == "Java") {
-        document.querySelector(".content").innerHTML = "Java is a general-purpose computer-programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers ";
+        document.querySelector(".content").innerHTML = "Java is one of the main languages I program in." + 
+        "I have been programming in Java since I was in middle school." + 
+        " A lot of the projects that I do are in java as a lot of the Northeastern Cybersecurity curriculm." + 
+        " As you will see in the coming projects listed on here a lot of them are in Java." + 
+        "As for my proficiency I would say Im definitely comfortable writing code in java" + 
+        " I very much enjoy the syntax of java and I think it is a very good language to learn." + 
+        " and strive to become better at every language and everything I do everyday.";
+        document.getElementById("header").innerText = "Java";
       }
       else if (e.target.innerText == "Python") {
-        document.querySelector(".content").innerHTML = "Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects. Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented, and functional programming. Python is often described as a \"batteries included\" language due to its comprehensive standard library. Python was conceived in the late 1980s as a successor to the ABC language. Python 2.0, released in 2000, introduced features like list";
+        document.querySelector(".content").innerHTML = "Python is currently a language i am learning. Definitely towards the beginner side but really enjoying it so far." +
+        + " The toughest thing for me really is just learning the syntax, I had a lot of Java and coding knowledge in general going into learning Python so it was a bit easier for me to pick up."
+        + "I started learning Python on my own just very basics but Northeastern Cybersecurity also has many classes that use python so it has been very beneficial to me as I am building off of my basics and learning more advanced things.";
+        document.getElementById("header").innerText = "Python";
+      }
+      else if(e.target.innerText == "C") {
+        document.querySelector(".content").innerHTML = "C is a language I have started to learn recently." +
+        "Im very thankful for Northeastern Cybersecurity for having my Computer Systems class that teaches C. I would consider myself a little bit above a beginner when it comes to C but then again with my previous coding knowledge it has been helping greatly." + 
+        "A couple projects I have done in C you will see listed down below in the Projects section but that includes creating a UNIX Shell and a File System using the FUSE API."
+        "I am very excited to learn more about C and I am looking forward to learning more about it in the future.";
+        document.getElementById("header").innerText = "C";
+      }
+      else if(e.target.innerText == "C++") {
+        document.querySelector(".content").innerHTML = "C++ is a language I have started to learn recently as well, I mainly just have been trying out some Leetcode's using C++" +
+        "havent really started to create C++ projects but definitely very interested in learning more about it and I do plan to take a class on it in the future as well.";
+        document.getElementById("header").innerText = "C++";
+      }
+      else if(e.target.innerText == "HTML") {
+        document.querySelector(".content").innerHTML = "HTML was one of the first languages I learned, along with HTML." +
+        " I started to learn it through Codeacademy in middle school and was was really fascinated by what you could create which is why this website is here in the first place."
+        + " for awhile until I came across Cybersecurity in high school."
+        + "This website was made in HTML, CSS, and Javascript as you will see in the projects section" +
+        "as for my experience with HTML I would say I am a bit on the begineer side but just super interested in learning more about HTML and finding new ways I can incoroprate it into my projects.";
+        document.getElementById("header").innerText = "HTML";
+      }
+      else if(e.target.innerText == "CSS") {
+        document.querySelector(".content").innerHTML = "CSS is a language I started learning, along with HTML, in middle school" + "The HTML section contains more information about it if you want to read more about" + 
+        "CSS I used to create the styling of this website, I would say I am a bit on the beginner side but I am very interested in learning more about CSS and finding new ways I can incoroprate it into my projects.";
+        document.getElementById("header").innerText = "CSS";
+      }
+      else if(e.target.innerText == "SQL") {
+        document.querySelector(".content").innerHTML = "I really have to thank Northeastern Cybersecurity curriculm here again for the opportunity of learning SQL" +
+        "I knew about SQL before and SQL injections which has always fascinated me." +
+        "My Foundations of Cybersecurity class at Northeastern taught me a lot about SQL and SQL injections and actually performing some of my own on some websites designed for the class" +
+        "I am still a faily beginner when it comes to SQL, I truly hope to learn more and more and become more knowledgeable about it in the future as SQL injections as it is still a prevelant problem in today's world.";
+        document.getElementById("header").innerText = "SQL";
+      }
+      else if(e.target.innerText == "JavaScript") {
+        document.querySelector(".content").innerHTML = "JavaScript is a language I also have been learning quite recently however I have had some amazing time with it and it has been so interesting to learn." + 
+        "Javascript was used to create the popup you are currently reading on and It is also how I am creating the nice smooth scroll effect when you click on the navigation bar in the top." + 
+        "My previous knowledge of Java has helped me alot with learning Javascript as they are very similar in syntax and I know I have said this about all languages so far but I do truly hope to learn more about it" +
+        "and become more knowledgeable about it in the future I love the idea that there are so many differing languages there is so much that I want to learn.";
+        document.getElementById("header").innerText = "JavaScript";
+      }
+      else if(e.target.innerText == "x86 Assembly") {
+        document.querySelector(".content").innerHTML = "I again have to thank Northeastern Cybersecurity for the opportunity of learning x86 Assembly" +
+         "I learned this in the beginning of my Computer Systems class." + 
+         "Unfortunately we didnt learn too too much about it but some projects that I have done in x86 include a calculator and implementations of a queue and a vector." + 
+         "I am still a beginner when it comes to x86 Assembly as memory and memory hacking has always been an interest of mine" + 
+         "I have hacked a couple of small trivial games using cheat engine and writing over memory so I hope I get more experience to work with Assembly in the future.";
+         document.getElementById("header").innerText = "x86 Assembly";
+        }
+      else if(e.target.innerText == "Davinci Resolve") {
+        document.querySelector(".content").innerHTML = "Davinci Resolve is a application I have been using recently as well, I have been mainly using it to create montage videos of one of the games I play the most which is Valorant." + 
+        "You can check out some of the videos listed in the contact section down below." + 
+        "I would say I am fairly comfortable using Davinci Resolve to edit videos and create cool effetcs.";
+        document.getElementById("header").innerText = "Davinci Resolve";
+      }
+      
 
-  }
-  
+
     }
 });
 </script>
@@ -219,6 +281,45 @@ rootEl.addEventListener('click', function clickEventHandler(e) {
 
 
 <div id = "projects"> 
+
+
+  <div class = "projectsContainer">
+
+    <h1 id = "projectsHeader">Projects</h1>
+
+
+    <ul class = "projectsGrid">
+      <li id = "project1">
+        <h2 id ="proj1Header"> Image Processor </h3>
+          <img src = "GUI_SCREENSHOT_WITH_res_tree.jpg" id = "imgGUI">
+          <a target = "_blank" href = "https://github.com/Bacconatr/ImageProcessor" id = "imgGUIRef">
+          </a>
+          <p id = "proj1Desc"> This project I created with a partner in my Object Oriented Design Class over the summer. It in corporates the ability to load and save images and perform a numerous amount of processes including: bluring, flipping horizontally and vertically, and greyscale.</p>
+      </li>
+
+      <li id = "project2">
+
+      </li>
+      <li id = "project3">
+
+      </li>
+      <li id = "project4">
+
+      </li>
+      <li id = "project5">
+
+      </li>
+      <li id = "project6">
+
+      </li>
+
+    </ul>
+
+
+
+
+
+  </div>
 
 
 </div>
