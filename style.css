@@ -515,7 +515,12 @@ section {
   align-items: center;
   height: 100%;
   padding: 0 3rem;
+  transform: translateY(15%);
 
+}
+
+.projectsGrid {
+  transform: translateY(25%);
 }
 
 #contact {
@@ -526,6 +531,7 @@ section {
   height: 100%;
   padding: 0 3rem;
   background: radial-gradient(ellipse at bottom,#090a0f 0% #1b2735 100%);
+  transform: translateY(150%);
 }
 
 .tagCloudContainer {
@@ -646,29 +652,35 @@ section {
 }
 
 
+.projectsContainer {
+  transform: translateY(10%);
+}
+
 #projectsHeader {
   display: flex;
   align-self: center;
   justify-content: center;
-  transform: translateY(-200%);
+  transform: translateY(500%);
 
 }
 
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5rem;
+  grid-gap: 20rem;
 }
 
 #project1 {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: 100%;
+  height: 125%;
   padding: 0 3rem;
   background-color: #1b2735;
   border-radius: .5rem;
   border: #1b2735 5px solid;
 }
+
 
 #proj1Header {
   display: flex;
@@ -677,26 +689,42 @@ section {
   font-size: 1.5rem;
 }
 
-#proj1Desc {
+
+#imgGUIRef {
   display: flex;
+  width: 75%;
+  height: 75%;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  margin:0 auto;
 
 }
 
-
-
-#imgGUI{
-  position: sticky;
+#imgGUI {
   display: flex;
-  height: auto; 
-  justify-content: center;
+  width: 100%;
+  height: auto;
   align-items: center;
-  width: 25vw;
-  flex: 1;
-  transform: translateY(0%);
-  transform: translateX(-25%);
+  justify-content: center;
+  margin:0 auto;
+  transform: translateY(10%);
+}
+
+#imgGUI:hover {
+  opacity: .3;
+  transition: opacity .3s ease-in-out;
+}
+
+
+#proj1Desc {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  word-wrap: normal;
+  font-size: .9rem;
+  transform: translateY(10%);
 }
 
 
@@ -704,63 +732,241 @@ section {
 #project2 {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: 100%;
+  height: 125%;
   padding: 0 3rem;
   background-color: #1b2735;
   border-radius: .5rem;
   border: #1b2735 5px solid;
+}
+
+#proj2Header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+#imgShellRef {
+  display: flex;
+  width: 75%;
+  height: 75%;
+  align-items: center;
+  justify-content: center;
+  margin:0 auto;
+
+}
+
+#imgShell {
+  display: flex;
+  width: 75%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  margin:0 auto;
+  transform: translateY(5%);
+}
+
+#imgShell:hover {
+  opacity: .3;
+  transition: opacity .3s ease-in-out;
+}
+
+
+#proj2Desc {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  word-wrap: normal;
+  font-size: .9rem;
+
 }
 
 #project3 {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: 100%;
+  height: 125%;
   padding: 0 3rem;
   background-color: #1b2735;
   border-radius: .5rem;
   border: #1b2735 5px solid;
 }
+
+
+#proj3Header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+#imgFuseRef {
+  display: flex;
+  width: 75%;
+  height: 75%;
+  align-items: center;
+  justify-content: center;
+  margin:0 auto;
+
+}
+
+#imgFuse {
+  margin:0 auto;
+  display: flex;
+  width: 75%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-15%,5%);  
+}
+
+#imgFuse:hover {
+  opacity: .3;
+  transition: opacity .3s ease-in-out;
+}
+
+
+#proj3Desc {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  word-wrap: normal;
+  font-size: .9rem;
+
+}
+
+
 
 #project4 {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: 100%;
+  height: 125%;
   padding: 0 3rem;
   background-color: #1b2735;
   border-radius: .5rem;
   border: #1b2735 5px solid;
 }
 
-#project5 {
+#proj4Header {
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 0 3rem;
-  background-color: #1b2735;
-  border-radius: .5rem;
-  border: #1b2735 5px solid;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
 }
 
-#project6 {
+
+#imgWEBRef {
   display: flex;
-  flex-direction: column;
+  width: 75%;
+  height: 75%;
+  align-items: center;
+  justify-content: center;
+  margin:0 auto;
+
+}
+
+#imgWEB {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  margin:0 auto;
+  transform: translateY(10%);
+}
+
+#imgWEB:hover {
+  opacity: .3;
+  transition: opacity .3s ease-in-out;
+}
+
+
+#proj4Desc {
+  display: flex;
+  width: 100%;
   height: 100%;
-  padding: 0 3rem;
-  background-color: #1b2735;
-  border-radius: .5rem;
-  border: #1b2735 5px solid;
+  align-items: center;
+  justify-content: center;
+  word-wrap: normal;
+  font-size: .9rem;
+  transform: translateY(18%);
+}
+
+
+#contactHeader {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  transform: translateY(-100%);
 }
 
 
 
+form { 
+  max-width:420px;
+  margin:50px auto; 
+}
+
+.feedback-input {
+  color:white;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #1899CD;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { 
+  border:2px solid #1b2735;
+}
+
+[type="submit"] {
+  width: 100%;
+  background:#1899CD;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-family: "Monteserrant";
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover {
+  font-family: "Monteserrant";
+  background:#1899CD; }
 
 
 
+.fa-brands {
+  color:#1899CD;
+  font-size: 2rem;
+}
 
-
-
-
-
+.contactLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 1rem;
+  
+}
 
 
 
