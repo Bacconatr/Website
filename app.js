@@ -1,18 +1,5 @@
 
 
-// smooth scrolling effect for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-
-
 
 
 // animation on scroll effect for about section
@@ -36,7 +23,6 @@ const observer = new IntersectionObserver((entries) => {
             return;
         } else {
                 entry.target.classList.remove('show');
-
                 return;
             }
 
@@ -48,6 +34,8 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 
 hiddenElements.forEach((element) => {observer.observe(element);});
+
+
 
 
 // animation on scroll effect for about text box's 
@@ -86,33 +74,7 @@ hiddenSlide.forEach((element) => {slideObserver.observe(element);});
 document.querySelectorAll('.tagCloudContainer').style.color = color;
 
 
-
-
-var messages = {
-    "Java": "Explanation about Lorem...",
-    "Python": "Explanation about dolor...",
-    "C": "C",
-    "C++":"C++",
-    "For": "hello World",
-    "H":"hello world"
-};
-
-$("#welcomeText").on("click", "span", function(e) {
-    e.stopPropagation();
-    var $this = $( this ),
-        _text = $this.text();
-    
-    var dialogContent = messages[_text.toLowerCase()];
-    if(dialogContent && dialogContent.length > 0) {
-        $( "#dialog" ).dialog({
-            "modal": true,
-            "title": _text
-        }).html(dialogContent);
-    }
-});
-
-
-
+// function for the popup overlay on the contact page
 function popUP() {
     document.querySelector(".overlay").style.visibility = "hidden";
     document.querySelector(".overlay").style.opacity = "0";

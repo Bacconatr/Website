@@ -10,8 +10,6 @@ body {
 
 }
 
-
-
 html {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   /*overflow: hidden;*/
@@ -148,6 +146,10 @@ html {
   box-sizing: border-box;
 }
 
+/* Styling the navigation bar */
+
+/* ----------------------------------------------------------------- */
+
 ul {
   list-style-type: none;
   
@@ -210,16 +212,11 @@ nav ul li {
 }
 
 
-.burger-menu {
-  display: flex;
-  justify-self: baseline;
-  color: #FFFFFF;
-  font-size: 2rem;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
+/* ----------------------------------------------------------------- */
 
-}
+
+/* Styling the welcome / landing section */
+/* ----------------------------------------------------------------- */
 
 .waviy {
   position: sticky;
@@ -313,13 +310,18 @@ img {
   left: 40%;
   transform: translateY(-100%);
 }
+/* ----------------------------------------------------------------- */
+
+
+/* Styling the transition when the user scrolls down far enough for 
+the about me section */
+/* ----------------------------------------------------------------- */
 
 
 section {
   width: 100vw;
   height: 100vh;
 }
-
 
 .hidden {
   opacity: 0;
@@ -350,26 +352,26 @@ section {
     transform: translateY(0%);
   }
 }
+/* ----------------------------------------------------------------- */
 
 
 
+
+
+
+
+
+/* Styling for about me section */
+/* ----------------------------------------------------------------- */
 
 
 .about {
-
   display: flex;
   width: 100vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-#line {
-  border-bottom: 1px solid #090a0f;
-  display: block;
-}
-
-
 
 #about {
   display: flex;
@@ -468,7 +470,11 @@ section {
   line-height: 1.5em;
   flex: 1;
 }
+/* ----------------------------------------------------------------- */
 
+
+/* Styling for the skills section */
+/* ----------------------------------------------------------------- */
 .skills {
   width: 100vw;
   height: 100vh;
@@ -506,34 +512,14 @@ section {
 
 
 }
+/* ----------------------------------------------------------------- */
 
 
-#projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding: 0 3rem;
-  transform: translateY(15%);
 
-}
 
-.projectsGrid {
-  transform: translateY(25%);
-}
 
-#contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding: 0 3rem;
-  background: radial-gradient(ellipse at bottom,#090a0f 0% #1b2735 100%);
-  transform: translateY(150%);
-}
-
+/* Styling for the word cloud */
+/* ----------------------------------------------------------------- */
 .tagCloudContainer {
   position: sticky;
   display: flex;
@@ -558,13 +544,16 @@ section {
 .tagcloud--item:hover {
   color:#1899CD;
 }
+/* ----------------------------------------------------------------- */
 
 
-
+/*Styling for the text telling to click on a word in the word cloud */
+/* ----------------------------------------------------------------- */
 #paragraph {
   min-width: 20vw;
   max-width: 20vw;
 }
+
 
 .skills.text {
   position: sticky;
@@ -582,12 +571,14 @@ section {
   transform: translate(-100%,200%);
 
 }
+/* ----------------------------------------------------------------- */
 
 
 
 
 
- 
+/* Styling for the popup window when you click a word in the word cloud */
+ /* ----------------------------------------------------------------- */
 .overlay {
   display:fixed;
   position: fixed;
@@ -650,6 +641,26 @@ section {
 #header {
   color:white;
 }
+/* ----------------------------------------------------------------- */
+
+
+/* Setting up styling for how I want my projects to be displayed */
+/* ----------------------------------------------------------------- */
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 3rem;
+  transform: translateY(15%);
+
+}
+
+.projectsGrid {
+  transform: translateY(25%);
+}
 
 
 .projectsContainer {
@@ -670,6 +681,8 @@ section {
   grid-gap: 20rem;
 }
 
+/* Styling for displaying project 1 */
+/* ----------------------------------------------------------------- */
 #project1 {
   display: flex;
   flex-direction: column;
@@ -726,8 +739,11 @@ section {
   font-size: .9rem;
   transform: translateY(10%);
 }
+/*----------------------------------------------------------------- */
 
 
+/* Styling for displaying project 2 */
+/* ----------------------------------------------------------------- */
 
 #project2 {
   display: flex;
@@ -783,6 +799,11 @@ section {
   font-size: .9rem;
 
 }
+/* ----------------------------------------------------------------- */
+
+
+/* Styling for displaying project 3*/
+/* ----------------------------------------------------------------- */
 
 #project3 {
   display: flex;
@@ -839,8 +860,11 @@ section {
   font-size: .9rem;
 
 }
+/* ----------------------------------------------------------------- */
 
 
+/* Styling for displaying project 4 */
+/* ----------------------------------------------------------------- */
 
 #project4 {
   display: flex;
@@ -897,6 +921,22 @@ section {
   font-size: .9rem;
   transform: translateY(18%);
 }
+/* ----------------------------------------------------------------- */
+
+
+/* Styling for Contact Me section */
+/* ----------------------------------------------------------------- */
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 3rem;
+  background: radial-gradient(ellipse at bottom,#090a0f 0% #1b2735 100%);
+  transform: translateY(150%);
+}
 
 
 #contactHeader {
@@ -906,14 +946,13 @@ section {
   transform: translateY(-100%);
 }
 
-
-
 form { 
   max-width:420px;
   margin:50px auto; 
 }
 
 .feedback-input {
+  font-family: "Monteserrant";
   color:white;
   font-weight:500;
   font-size: 18px;
@@ -940,7 +979,6 @@ form {
   border:0;
   cursor:pointer;
   color:white;
-  font-family: "Monteserrant";
   font-size:24px;
   padding-top:10px;
   padding-bottom:10px;
@@ -948,9 +986,16 @@ form {
   margin-top:-4px;
   font-weight:700;
 }
+
+
 [type="submit"]:hover {
-  font-family: "Monteserrant";
-  background:#1899CD; }
+  background:#1899CD; 
+}
+
+#submit {
+ font-family: "Montesserant";
+
+}
 
 
 
@@ -967,6 +1012,19 @@ form {
   gap: 1rem;
   
 }
+
+/* ----------------------------------------------------------------- */
+
+
+/* Styling for footer*/
+#footer {
+ transform: translateY(700%);
+ font-size: 1rem;
+ color: #FFF;
+}
+
+/* ----------------------------------------------------------------- */
+
 
 
 

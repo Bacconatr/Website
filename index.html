@@ -2,7 +2,7 @@
 <html lang="en">
 <html>
 
-
+ <!--Necessary imports and adding scripts-->
 <head>
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <link rel="stylesheet" href="style.css">
@@ -10,14 +10,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script defer src = "app.js">  </script>
 <script defer src = "scroll.js">  </script>
-
     <title>
         Alex's Website
         </title>
     
         <meta charset="UTF-8">
 </head>
-   
+
 
 
 <body>
@@ -30,7 +29,8 @@
 
 
 
-    
+ <!--Navigation Bar -->
+
 <nav>
   <h1>Alex Levin</h1>
     <ul class="navigation">
@@ -44,7 +44,7 @@
     
 </nav>
 
-
+ <!--Welcome Text -->
 <div class="waviy">
 
 <h1 id="welcomeText">
@@ -71,7 +71,7 @@
 </div>
 
 
-<div id = "line"></div>
+ <!-- About Me Section -->
 
 <div id = "about">
 
@@ -83,14 +83,19 @@
 
   <div class= "flexWrapper noSlide">
 
-      <p id = "flex1"> Hi, my name is Alexander Levin I am currently a Cybersecurity Major at Northeastern University. 
+      <p id = "flex1"> Hi, my name is Alexander Levin. I am currently a Cybersecurity Major at Northeastern University. 
         I have always been interested in Cybersecurity at a young age when I would try and hack trivial browser games. 
-        It wasn't until high school where I would take my first Cybersecurity class that I would realize that I would want to pursue a career in Cybersecurity. 
+        It wasn't until high school where I would take my first Cybersecurity class that I would realize that I would want to pursue a career in it.
+ 
       </p>
-      <p id = "flex2"> Though I didnt get introduced into Cybersecurity until junior year of high school I found my love for computers when I built my first one when I was 13. I was fascinated by every aspect of my computer, the hardware, the software, all of it.
-        With building my first computer I was introduced to video games which would become a very important passion of mine. I didnt realize how big until I would be trying out and sucuessfully making it on one of the Northeastern Valorant teams where I would be a collegiate e-sports player.
+      <p id = "flex2"> 
+        Though I didn't get introduced into Cybersecurity until junior year of high school I found my love for computers when I built my first one when I was 13. I was fascinated by every aspect of my computer, the hardware, the software, all of it.
+                With building my first computer I was introduced to video games which would become a very important passion of mine. I didn't realize how big until I would be trying out and successfully making it on one of the Northeastern Valorant teams where I would be a collegiate esports player and captain of my team.
+        
       </p>
-      <p id = "flex3"> Though computers and video games are very important and special passions of mine, some of my other interests include skiing, web development, travelling, and video editing. </p>
+      <p id = "flex3">Though computers and video games are very important and special passions of mine, some of my other interests include skiing, web development, traveling, and video editing.
+
+      </p>
 
   </div>
 
@@ -101,6 +106,7 @@
 
 </div>
 
+ <!-- Skills Section -->
 
 <div id = "skills"> 
 
@@ -112,6 +118,7 @@
     <h1 id = "skillsHeader"> Skills </h1>
 
 
+    <!-- Popup when user clicks on word in word cloud -->
 
     <div id="popup1" class="overlay">
       <div class="popup">
@@ -123,6 +130,7 @@
     </div>
  
 
+    
     <div class = "skills text">
 
       <p id = "paragraph"> 
@@ -142,7 +150,7 @@
 
 
 
-
+ <!--Word Cloud -->
   <span class = "tagCloudContainer">
     <!-- script for TagCloud -->
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
@@ -181,84 +189,80 @@
   });
 
   var color = '#FFFFFF';
-
+  // Adding a click event listener to the tag cloud
   let rootEl = document.querySelector('.tagcloud');
-rootEl.addEventListener('click', function clickEventHandler(e) {
+  rootEl.addEventListener('click', function clickEventHandler(e) {
     if (e.target.className === 'tagcloud--item') {
-        //window.open(`https://www.google.com/search?q=${e.target.innerText}`, '_blank');
-        // your code here
         document.querySelector(".overlay").style.visibility = "visible";
         document.querySelector(".overlay").style.opacity = "1";
 
        // change the text of the popup depending on the skill
-
        if (e.target.innerText == "Java") {
         document.querySelector(".content").innerHTML = "Java is one of the main languages I program in." + 
-        "I have been programming in Java since I was in middle school." + 
-        " A lot of the projects that I do are in java as a lot of the Northeastern Cybersecurity curriculm." + 
-        " As you will see in the coming projects listed on here a lot of them are in Java." + 
-        "As for my proficiency I would say Im definitely comfortable writing code in java" + 
+        " I have been programming in Java since I was in middle school." + 
+        " A lot of the projects that I do are in Java as a part of the Northeastern Cybersecurity curriculum is in Java." + 
+         " As for my proficiency I would say I'm definitely comfortable writing code in java" + 
         " I very much enjoy the syntax of java and I think it is a very good language to learn." + 
-        " and strive to become better at every language and everything I do everyday.";
+        " I want to get better at Java and strive to become better at every language and everything I do everyday";
+
         document.getElementById("header").innerText = "Java";
       }
       else if (e.target.innerText == "Python") {
-        document.querySelector(".content").innerHTML = "Python is currently a language i am learning. Definitely towards the beginner side but really enjoying it so far." +
-        + " The toughest thing for me really is just learning the syntax, I had a lot of Java and coding knowledge in general going into learning Python so it was a bit easier for me to pick up."
-        + "I started learning Python on my own just very basics but Northeastern Cybersecurity also has many classes that use python so it has been very beneficial to me as I am building off of my basics and learning more advanced things.";
+        document.querySelector(".content").innerHTML = "Python is currently a language I am learning. Definitely towards the beginner side but really enjoying it so far." +
+        " The toughest thing for me really is just learning the syntax, I had a lot of Java and coding knowledge in general going into learning Python so it was a bit easier for me to pick up."
+        + " I started learning Python on my own, just very basics but Northeastern Cybersecurity also has many classes that use Python so it has been very beneficial to me as I am building off of my basics and learning more advanced things.";
         document.getElementById("header").innerText = "Python";
       }
       else if(e.target.innerText == "C") {
         document.querySelector(".content").innerHTML = "C is a language I have started to learn recently." +
-        "Im very thankful for Northeastern Cybersecurity for having my Computer Systems class that teaches C. I would consider myself a little bit above a beginner when it comes to C but then again with my previous coding knowledge it has been helping greatly." + 
-        "A couple projects I have done in C you will see listed down below in the Projects section but that includes creating a UNIX Shell and a File System using the FUSE API."
+        "I'm very thankful for Northeastern Cybersecurity for having my Computer Systems class that taught me C. I would consider myself a little bit above a beginner when it comes to C but then again with my previous coding knowledge it has been helping greatly." + 
+        " A couple projects I have done in C you will see listed down below in the Projects section but that includes creating a UNIX Shell and a file system using the FUSE API."
         "I am very excited to learn more about C and I am looking forward to learning more about it in the future.";
         document.getElementById("header").innerText = "C";
       }
       else if(e.target.innerText == "C++") {
-        document.querySelector(".content").innerHTML = "C++ is a language I have started to learn recently as well, I mainly just have been trying out some Leetcode's using C++" +
-        "havent really started to create C++ projects but definitely very interested in learning more about it and I do plan to take a class on it in the future as well.";
+        document.querySelector(".content").innerHTML = "C++ is a language I have started to learn recently as well, I mainly just have been trying out some Leetcode using C++" +
+        "I haven't really started to create C++ projects but I'm definitely very interested in learning more about it and I do plan to take a class on it in the future as well.";
         document.getElementById("header").innerText = "C++";
       }
       else if(e.target.innerText == "HTML") {
-        document.querySelector(".content").innerHTML = "HTML was one of the first languages I learned, along with HTML." +
-        " I started to learn it through Codeacademy in middle school and was was really fascinated by what you could create which is why this website is here in the first place."
-        + " for awhile until I came across Cybersecurity in high school."
-        + "This website was made in HTML, CSS, and Javascript as you will see in the projects section" +
-        "as for my experience with HTML I would say I am a bit on the begineer side but just super interested in learning more about HTML and finding new ways I can incoroprate it into my projects.";
+        document.querySelector(".content").innerHTML = "HTML was one of the first languages I learned, along with CSS." +
+        " I started to learn it through Codecademy in middle school and was really fascinated by what you could create which is why this website is here in the first place."
+              + " This website was made in HTML, CSS, and Javascript as you will see in the projects section" +
+        "As for my experience with HTML I would say I am a bit on the beginner side but just super interested in learning more about HTML and finding new ways I can incorporate it into my projects.";
         document.getElementById("header").innerText = "HTML";
       }
       else if(e.target.innerText == "CSS") {
-        document.querySelector(".content").innerHTML = "CSS is a language I started learning, along with HTML, in middle school" + "The HTML section contains more information about it if you want to read more about" + 
-        "CSS I used to create the styling of this website, I would say I am a bit on the beginner side but I am very interested in learning more about CSS and finding new ways I can incoroprate it into my projects.";
+        document.querySelector(".content").innerHTML = "CSS is a language I started learning, along with HTML, in middle school." + " The HTML section contains more information about it if you want to read more about it." + 
+        "I used CSS to create the styling of this website. I would say I am a bit on the beginner side but I am very interested in learning more about CSS and finding new ways I can incorporate it into my projects.";
         document.getElementById("header").innerText = "CSS";
       }
       else if(e.target.innerText == "SQL") {
-        document.querySelector(".content").innerHTML = "I really have to thank Northeastern Cybersecurity curriculm here again for the opportunity of learning SQL" +
-        "I knew about SQL before and SQL injections which has always fascinated me." +
-        "My Foundations of Cybersecurity class at Northeastern taught me a lot about SQL and SQL injections and actually performing some of my own on some websites designed for the class" +
-        "I am still a faily beginner when it comes to SQL, I truly hope to learn more and more and become more knowledgeable about it in the future as SQL injections as it is still a prevelant problem in today's world.";
+        document.querySelector(".content").innerHTML = "I really have to thank Northeastern Cybersecurity curriculum here again for the opportunity of learning SQL." +
+        " I knew about SQL before and SQL injections which has always fascinated me." +
+        " My Foundations of Cybersecurity class at Northeastern taught me a lot about SQL and SQL injections and actually performing some of my own on some websites designed for the class." +
+        " I am still a fairly beginner when it comes to SQL, I truly hope to learn more and become more knowledgeable about it in the future as SQL injections as it is still a prevalent problem in today's world.";
         document.getElementById("header").innerText = "SQL";
       }
       else if(e.target.innerText == "JavaScript") {
-        document.querySelector(".content").innerHTML = "JavaScript is a language I also have been learning quite recently however I have had some amazing time with it and it has been so interesting to learn." + 
-        "Javascript was used to create the popup you are currently reading on and It is also how I am creating the nice smooth scroll effect when you click on the navigation bar in the top." + 
-        "My previous knowledge of Java has helped me alot with learning Javascript as they are very similar in syntax and I know I have said this about all languages so far but I do truly hope to learn more about it" +
-        "and become more knowledgeable about it in the future I love the idea that there are so many differing languages there is so much that I want to learn.";
+        document.querySelector(".content").innerHTML = "JavaScript is a language I also have been learning quite recently, however I have had some amazing time with it and it has been so interesting to learn." + 
+        " Javascript was used to create the popup you are currently reading on, creating the nice smooth scroll effect when you click on the navigation bar in the top and the word cloud of all my skills." + 
+        " My previous knowledge of Java has helped me alot with learning Javascript as they are very similar in syntax and I know I have said this about all languages so far but I do truly hope to learn more about it" +
+        "and become more knowledgeable about it in the future. I love the idea that there are so many different languages, there are so many that I want to learn.";
         document.getElementById("header").innerText = "JavaScript";
       }
       else if(e.target.innerText == "x86 Assembly") {
-        document.querySelector(".content").innerHTML = "I again have to thank Northeastern Cybersecurity for the opportunity of learning x86 Assembly" +
-         "I learned this in the beginning of my Computer Systems class." + 
-         "Unfortunately we didnt learn too too much about it but some projects that I have done in x86 include a calculator and implementations of a queue and a vector." + 
-         "I am still a beginner when it comes to x86 Assembly as memory and memory hacking has always been an interest of mine" + 
-         "I have hacked a couple of small trivial games using cheat engine and writing over memory so I hope I get more experience to work with Assembly in the future.";
+        document.querySelector(".content").innerHTML = "I again have to thank Northeastern Cybersecurity for the opportunity of learning x86 Assembly." +
+        " I learned this in the beginning of my Computer Systems class." + 
+        " Unfortunately we didn't learn too much about it but some projects that I have done in x86 include a calculator and implementations of a queue and a vector." + 
+        " I am still a beginner when it comes to x86 as memory and memory hacking has always been an interest of mine." + 
+        " I have hacked a couple of small trivial games using cheat engine and writing over memory so I hope I get more experience to work with assembly in the future.";
          document.getElementById("header").innerText = "x86 Assembly";
         }
       else if(e.target.innerText == "Davinci Resolve") {
-        document.querySelector(".content").innerHTML = "Davinci Resolve is a application I have been using recently as well, I have been mainly using it to create montage videos of one of the games I play the most which is Valorant." + 
-        "You can check out some of the videos listed in the contact section down below." + 
-        "I would say I am fairly comfortable using Davinci Resolve to edit videos and create cool effetcs.";
+        document.querySelector(".content").innerHTML = "Davinci Resolve is an application I have been using recently as well, I have been mainly using it to create montage videos of one of the games I play the most, which is Valorant." + 
+        " You can check out some of the videos on my Youtube listed in the contact section down below." + 
+        " I would say I am fairly comfortable using Davinci Resolve to edit videos and create cool effects";
         document.getElementById("header").innerText = "Davinci Resolve";
       }
       
@@ -280,6 +284,7 @@ rootEl.addEventListener('click', function clickEventHandler(e) {
 
 
 
+ <!--Projects Section -->
 
 <div id = "projects"> 
 
@@ -288,6 +293,7 @@ rootEl.addEventListener('click', function clickEventHandler(e) {
 
     <h1 id = "projectsHeader">Projects</h1>
 
+ <!--Project 1: Image Processor -->
 
     <ul class = "projectsGrid">
       <li id = "project1">
@@ -298,42 +304,46 @@ rootEl.addEventListener('click', function clickEventHandler(e) {
             </a>
             <p id = "proj1Desc"> 
               This project I created in my Object Oriented Design Class over the summer. 
-              It in corporates the ability to load and save images and perform a numerous amount of processes including: bluring, flipping horizontally and vertically, and greyscale.
+              It incorporates the ability to load and save images and perform a numerous amount of processes including: blurring, flipping horizontally and vertically, and greyscale.
               Please click the image to checkout the github repository.
-            </p>  
       </li>
 
+      <!--Project 2: UNIX Shell -->
+
       <li id = "project2">
-        <h2 id = "proj2Header">Unix Shell</h2>
-        <a target = "_blank" href = "https://github.com/Bacconatr/ImageProcessor" id = "imgShellRef">
+        <h2 id = "proj2Header">UNIX Shell</h2>
+        <a target = "_blank" href = "https://github.com/Bacconatr/UNIX-Shell" id = "imgShellRef">
           <img src = "UNIXShell.png" id = "imgShell">
         </a>
         <p id = "proj2Desc"> 
           I created the UNIX Shell in my Computer Systems class. It is coded in C and implements many of the same functionality as the normal
-          UNIX Shell including the capabilities to execute programs, built-in commands, command line arguments, and operators. For more information, click the image to checkout the github repository.
+          UNIX Shell includes the capabilities to execute programs, built-in commands, command line arguments, and operators. For more information, click the image to checkout the github repository.
+
         </p>  
 
       </li>
+
+      <!--Project 3: FUSE File System -->
       <li id = "project3">
         <h2 id = "proj3Header">FUSE File System</h2>
-        <a target = "_blank" href = "https://github.com/Bacconatr/ImageProcessor" id = "imgFuseRef">
+        <a target = "_blank" href = "https://github.com/Bacconatr/FUSE-File-System" id = "imgFuseRef">
           <img src = "FUSE.png" id = "imgFuse">
         </a>
         <p id = "proj3Desc"> 
-          I also created the FUSE File System in my Computer Systems class using the FUSE api. It is coded in Shell and C and implements many of the same functionality as a normal filesystem, implementing functionality
-           such as: moving, renaming, creating, and deleting files and directories.
-        </p>  
-
-
+          I also created the FUSE File System in my Computer Systems class using the FUSE API. It is coded in Shell and C and implements many of the same functionality as a normal filesystem, implementing functionality
+          such as: moving, renaming, creating, and deleting files and directories.
       </li>
+
+      <!--Project 4: Website -->
       <li id = "project4">
         <h2 id = "proj4Header">Website</h2>
-        <a target = "_blank" href = "https://github.com/Bacconatr/ImageProcessor" id = "imgWEBRef">
+        <a target = "_blank" href = "https://github.com/Bacconatr/Website" id = "imgWEBRef">
           <img src = "Web.png" id = "imgWEB">
         </a>
         <p id = "proj4Desc"> 
-         If you want to check out the source code for my website you can check it out on my github which you can access by clicking on the picture. 
-         I coded this in Javascript, HTML, and CSS. This was by far one of my favorite projects as it was a lot of fun to create and I learned a lot about web development.
+          If you want to check out the source code for my website you can check it out on my github which you can access by clicking on the picture. 
+          I coded this in Javascript, HTML, and CSS. This was by far one of my favorite projects as it was a lot of fun to create and I learned a lot about web development and provided me a great way to share my projects and information.
+ 
         </p>  
 
       </li>
@@ -348,6 +358,8 @@ rootEl.addEventListener('click', function clickEventHandler(e) {
 
 
 </div>
+
+<!--Contact me Section-->
 <div id = "contact"> 
 
   <h2 id = "contactHeader"> Contact Me</h2>
@@ -357,11 +369,11 @@ rootEl.addEventListener('click', function clickEventHandler(e) {
     <input name="name" type="text" class="feedback-input" placeholder="Name" />   
     <input name="email" type="text" class="feedback-input" placeholder="Email" />
     <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
-    <input type="submit" value="SUBMIT"/>
+    <input type="submit" value="SUBMIT" id = "submit"/>
   </form>
 
   <div class = "contactLinks">
-    <h4 id = "contactLinksHeader">Check out my other Social Media:</h4>
+    <h4 id = "contactLinksHeader">Check out my other social media here:</h4>
     <a target = "_blank" href = "https://www.linkedin.com/in/alexxlevin/">
       <i class="fa-brands fa-linkedin"></i>
     </a>
@@ -382,8 +394,8 @@ rootEl.addEventListener('click', function clickEventHandler(e) {
 
   
 </div>
-
-
+<!--Footer-->
+<footer id = "footer">Designed and Built by Alex Levin</footer> 
 
 </body>
 </html>
