@@ -4,7 +4,7 @@
 
 // animation on scroll effect for about section
 const appearOptions = {
-    threshold: 1,
+    threshold: .5,
     rootMargin: "400px 0px -200px 0px"
 };
 
@@ -40,26 +40,33 @@ hiddenElements.forEach((element) => {observer.observe(element);});
 
 // animation on scroll effect for about text box's 
 const appearOptions2 = {
-    threshold: .5,
+    threshold: .4,
     rootMargin: "0px 0px 0px 0px"
 };
 
+let lastScrollY = window.scrollY;
+let scrollDown = true;
+window.addEventListener('scroll', () => {
+
+    scrollDown = window.scrollY > lastScrollY
+    lastScrollY = window.scrollY;
+});
+
 const slideObserver = new IntersectionObserver((entries) => {
-
-
-
     entries.forEach((entry) => {
-
         console.log(entry);
-
-
-        if(entry.isIntersecting) {
-            entry.target.classList.add('slide');
+        if(entry.isIntersecting && scrollDown) {
+            // delay by 1 second
+            setTimeout(() => {
+                entry.target.classList.add('slide');
+            }, 500);
             return;
         } else {
                 entry.target.classList.remove('slide');
                 return;
             }
+
+            
 
     });
 
